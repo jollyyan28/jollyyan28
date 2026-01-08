@@ -1,0 +1,24 @@
+body { background-color: #fdfaf6; margin: 0; font-family: 'Georgia', serif; color: #1a1a1a; }
+
+/* Polaroid Styling */
+.polaroid-card {
+    background: white;
+    padding: 15px 15px 60px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+    transform: rotate(-2deg);
+    width: 300px;
+    margin: 50px auto;
+    transition: 0.5s;
+}
+.polaroid-card:hover { transform: rotate(0deg) scale(1.05); }
+.polaroid-card img { width: 100%; filter: sepia(10%); }
+.era-caption { text-align: center; font-family: 'Courier New', monospace; font-weight: bold; }
+
+/* CD Animation */
+.cd-case { position: relative; width: 400px; margin: 20px auto; cursor: pointer; }
+.case-front { background: white; padding: 20px; border: 1px solid #eee; position: relative; z-index: 2; box-shadow: 5px 5px 15px rgba(0,0,0,0.05); }
+.cd-disc { 
+    position: absolute; right: 10px; top: 10px; width: 100px; height: 100px; 
+    background: #222; border-radius: 50%; z-index: 1; transition: 0.6s;
+}
+.cd-case:hover .cd-disc { transform: translateX(60px) rotate(180deg); }
