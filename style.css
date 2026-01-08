@@ -1,24 +1,96 @@
-body { background-color: #fdfaf6; margin: 0; font-family: 'Georgia', serif; color: #1a1a1a; }
+:root {
+    --bg: #fdfaf6;
+    --ink: #1a1a1a;
+    --gold: #a67c52;
+    --clay: #7a7571;
+    --white: #ffffff;
+}
 
-/* Polaroid Styling */
-.polaroid-card {
-    background: white;
+* { box-sizing: border-box; }
+body { 
+    background-color: var(--bg); 
+    color: var(--ink); 
+    margin: 0; 
+    font-family: 'Georgia', serif; 
+    line-height: 1.6;
+    scroll-behavior: smooth;
+}
+
+/* Nav */
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 40px 8%;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+nav a { text-decoration: none; color: var(--ink); margin-left: 25px; transition: 0.3s; }
+nav a:hover { color: var(--gold); }
+
+/* Hero */
+.hero {
+    display: flex;
+    padding: 60px 8% 120px;
+    align-items: center;
+    gap: 100px;
+}
+
+.hero-text { flex: 1.5; }
+.hero-text h1 { font-size: clamp(40px, 6vw, 80px); font-weight: normal; margin: 20px 0; line-height: 1.1; }
+.hero-text em { font-family: 'Georgia', serif; font-style: italic; color: var(--clay); }
+.era-tag { font-family: 'Courier New', Courier, monospace; text-transform: uppercase; color: var(--gold); letter-spacing: 4px; font-weight: bold; }
+
+.status-bar { 
+    margin-top: 40px; 
+    font-size: 11px; 
+    text-transform: uppercase; 
+    letter-spacing: 1px; 
+    border-top: 1px solid #eee; 
+    padding-top: 20px;
+    display: flex; gap: 30px; color: var(--clay);
+}
+
+/* The Polaroid */
+.hero-image { flex: 1; display: flex; justify-content: center; }
+.polaroid {
+    background: var(--white);
     padding: 15px 15px 60px;
-    box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-    transform: rotate(-2deg);
-    width: 300px;
-    margin: 50px auto;
+    box-shadow: 0 20px 60px rgba(0,0,0,0.05);
+    transform: rotate(-3deg);
+    width: 320px;
     transition: 0.5s;
 }
-.polaroid-card:hover { transform: rotate(0deg) scale(1.05); }
-.polaroid-card img { width: 100%; filter: sepia(10%); }
-.era-caption { text-align: center; font-family: 'Courier New', monospace; font-weight: bold; }
+.polaroid:hover { transform: rotate(0deg) scale(1.02); }
+.img-placeholder { width: 100%; height: 350px; background: #eee; } /* Replace with <img> later */
+.polaroid p { text-align: center; font-family: 'Courier New', monospace; margin-top: 25px; font-weight: bold; }
 
-/* CD Animation */
-.cd-case { position: relative; width: 400px; margin: 20px auto; cursor: pointer; }
-.case-front { background: white; padding: 20px; border: 1px solid #eee; position: relative; z-index: 2; box-shadow: 5px 5px 15px rgba(0,0,0,0.05); }
-.cd-disc { 
-    position: absolute; right: 10px; top: 10px; width: 100px; height: 100px; 
-    background: #222; border-radius: 50%; z-index: 1; transition: 0.6s;
+/* CD Grid Section */
+.vault-section { padding: 100px 8%; background: #f9f7f4; }
+.section-heading { font-weight: normal; font-style: italic; font-size: 35px; text-align: center; margin-bottom: 60px; }
+
+.cd-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 50px; }
+
+.cd-item { position: relative; cursor: pointer; }
+.cd-case { 
+    background: var(--white); padding: 30px; border: 1px solid #eee; position: relative; z-index: 2; 
+    box-shadow: 10px 10px 30px rgba(0,0,0,0.03); transition: 0.5s;
 }
-.cd-case:hover .cd-disc { transform: translateX(60px) rotate(180deg); }
+.cd-disc { 
+    position: absolute; right: 10px; top: 10px; width: 140px; height: 140px; 
+    background: #222; border-radius: 50%; z-index: 1; transition: 0.6s cubic-bezier(0.19, 1, 0.22, 1);
+    border: 2px solid #111;
+}
+.cd-item:hover .cd-disc { transform: translateX(80px) rotate(180deg); }
+.cd-item:hover .cd-case { transform: translateX(-10px); }
+
+.track-no { font-family: 'Courier New', monospace; color: var(--gold); display: block; margin-bottom: 10px; }
+.tech-stack { font-size: 9px; letter-spacing: 2px; color: var(--clay); font-family: sans-serif; display: block; margin-top: 15px; }
+
+/* Footer */
+footer { text-align: center; padding: 100px 0; border-top: 1px solid #eee; }
+.linkedin-btn { 
+    display: inline-block; margin-top: 20px; padding: 15px 40px; background: var(--ink); 
+    color: white; text-decoration: none; font-size: 11px; letter-spacing: 2px; text-transform: uppercase; 
+}
