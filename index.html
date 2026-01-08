@@ -1,36 +1,78 @@
-<!DOCTYPE html>
+    <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jolly Yan | The Archive</title>
+    <title>The Archive | Toronto Era</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <section class="about-section">
-        <div class="polaroid-card">
-            <img src="YOUR_IMAGE_URL_HERE" alt="Portrait">
-            <p class="era-caption">in my <span>data & design</span> era.</p>
+    <nav>
+        <div class="logo">THE ARCHIVE // NO. 01</div>
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#vault">The Vault</a>
+            <a href="#gallery">Gallery</a>
+            <a href="https://www.linkedin.com" target="_blank">LinkedIn</a>
         </div>
-        <div class="bio-box">
-            <h1>Logic meets the <em>lyrical.</em></h1>
-            <p>CS Student @ University of Toronto. Finding patterns in data and poetry in code.</p>
-        </div>
-    </section>
+    </nav>
 
-    <section class="cd-vault">
-        <h3>From The Vault</h3>
-        <div class="cd-stack">
-            <div class="cd-case">
+    <header id="home" class="hero">
+        <div class="hero-text">
+            <span class="era-tag">The Late Night Coder Era</span>
+            <h1>Logic meets <br><em>the lyrical.</em></h1>
+            <p>1st Year Computer Science @ <strong>University of Toronto</strong>. Currently navigating the intersection of algorithmic patterns, pop culture, and 35mm aesthetics.</p>
+            <div class="status-bar">
+                <span>Listening to: <strong>Bewitched - Laufey</strong></span>
+                <span>Reading: <strong>The Ministry of Time</strong></span>
+            </div>
+        </div>
+        <div class="hero-image">
+            <div class="polaroid">
+                <div class="img-placeholder"></div>
+                <p>in my <span>data & design</span> era.</p>
+            </div>
+        </div>
+    </header>
+
+    <section id="vault" class="vault-section">
+        <h2 class="section-heading">From The Vault</h2>
+        <div class="cd-grid">
+            <div class="cd-item">
                 <div class="cd-disc"></div>
-                <div class="case-front">
-                    <span>TRACK 01 // DATA_SCIENCE.py</span>
-                    <p>Predictive Narratives</p>
+                <div class="cd-case">
+                    <span class="track-no">01</span>
+                    <h3>The Laufey Lyric Parser</h3>
+                    <p>A Python project analyzing word frequency and sentiment in jazz-pop lyrics.</p>
+                    <span class="tech-stack">PYTHON // NLP // DATA SCIENCE</span>
+                </div>
+            </div>
+            <div class="cd-item">
+                <div class="cd-disc"></div>
+                <div class="cd-case">
+                    <span class="track-no">02</span>
+                    <h3>Lens & Logic</h3>
+                    <p>A web-based gallery for Canon EOS metadata visualization.</p>
+                    <span class="tech-stack">JAVASCRIPT // EXIF DATA</span>
+                </div>
+            </div>
+            <div class="cd-item">
+                <div class="cd-disc"></div>
+                <div class="cd-case">
+                    <span class="track-no">03</span>
+                    <h3>The Reading Nook</h3>
+                    <p>A database-backed personal library tracker inspired by "The Ministry of Time".</p>
+                    <span class="tech-stack">SQL // FRONTEND DESIGN</span>
                 </div>
             </div>
         </div>
     </section>
+
+    <footer>
+        <p>Originally from Toronto // Produced by You.</p>
+        <a href="YOUR_LINKEDIN_URL" class="linkedin-btn">Connect on LinkedIn</a>
+    </footer>
 
 </body>
 </html>
